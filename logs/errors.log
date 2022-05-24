@@ -1,0 +1,95 @@
+INFO: 2022-01-18 20:03:05,144 *************************************************************************************
+INFO: 2022-01-18 20:03:05,738 For Help & To Learn More About how the bot works please visit our wiki here:
+INFO: 2022-01-18 20:03:06,157 https://cryptognome.gitbook.io/limitswap/
+INFO: 2022-01-18 20:03:07,347 *************************************************************************************
+ERROR: 2022-01-18 20:06:51,617 HTTPSConnectionPool(host='nd-857-678-344.p2pify.com', port=443): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000029529AD6F50>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connectionpool.py", line 382, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connectionpool.py", line 1010, in _validate_conn
+    conn.connect()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connection.py", line 358, in connect
+    conn = self._new_conn()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x0000029529AD6F50>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\urllib3\util\retry.py", line 574, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='nd-857-678-344.p2pify.com', port=443): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000029529AD6F50>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "e:\GitHub\Limit-Sniper\sniper.py", line 954, in <module>
+    run()
+  File "e:\GitHub\Limit-Sniper\sniper.py", line 929, in run
+    true_balance = auth()
+  File "e:\GitHub\Limit-Sniper\sniper.py", line 487, in auth
+    decimals = balanceContract.functions.decimals().call()
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\web3\contract.py", line 959, in call
+    return call_contract_function(
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\web3\contract.py", line 1503, in call_contract_function
+    return_data = web3.eth.call(
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\web3\module.py", line 57, in caller
+    result = w3.manager.request_blocking(method_str,
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\web3\manager.py", line 186, in request_blocking
+    response = self._make_request(method, params)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\web3\manager.py", line 147, in _make_request
+    return request_func(method, params)
+  File "cytoolz/functoolz.pyx", line 250, in cytoolz.functoolz.curry.__call__
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\web3\middleware\formatting.py", line 76, in apply_formatters
+    response = make_request(method, params)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\web3\middleware\gas_price_strategy.py", line 90, in middleware
+    return make_request(method, params)
+  File "cytoolz/functoolz.pyx", line 250, in cytoolz.functoolz.curry.__call__
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\web3\middleware\formatting.py", line 74, in apply_formatters
+    response = make_request(method, formatted_params)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\web3\middleware\attrdict.py", line 33, in middleware
+    response = make_request(method, params)
+  File "cytoolz/functoolz.pyx", line 250, in cytoolz.functoolz.curry.__call__
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\web3\middleware\formatting.py", line 74, in apply_formatters
+    response = make_request(method, formatted_params)
+  File "cytoolz/functoolz.pyx", line 250, in cytoolz.functoolz.curry.__call__
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\web3\middleware\formatting.py", line 74, in apply_formatters
+    response = make_request(method, formatted_params)
+  File "cytoolz/functoolz.pyx", line 250, in cytoolz.functoolz.curry.__call__
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\web3\middleware\formatting.py", line 74, in apply_formatters
+    response = make_request(method, formatted_params)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\web3\middleware\buffered_gas_estimate.py", line 40, in middleware
+    return make_request(method, params)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\web3\middleware\exception_retry_request.py", line 105, in middleware
+    return make_request(method, params)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\web3\providers\rpc.py", line 88, in make_request
+    raw_response = make_post_request(
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\web3\_utils\request.py", line 48, in make_post_request
+    response = session.post(endpoint_uri, data=data, *args, **kwargs)  # type: ignore
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\sessions.py", line 590, in post
+    return self.request('POST', url, data=data, json=json, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\Administrator\AppData\Local\Programs\Python\Python310\lib\site-packages\requests\adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='nd-857-678-344.p2pify.com', port=443): Max retries exceeded with url: / (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000029529AD6F50>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
